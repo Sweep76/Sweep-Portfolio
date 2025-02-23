@@ -25,7 +25,7 @@ const Education = () => {
       title: "College",
       institution: "University of San Carlos",
       year: "Aug 2021",
-      grade: "GPA: 1.54",
+      grade: "GPA: 1.63",
       icon: GraduationCap,
       color: "from-purple-500 to-pink-500",
       achievements: [
