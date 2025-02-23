@@ -31,7 +31,7 @@ const About = () => {
     { 
       icon: Code, 
       label: 'Backend Development',
-      description: 'Node.js | Php | ASP.NET | Next.js',
+      description: 'Node.js | Php | ASP.NET | Python',
       color: 'from-blue-500 to-cyan-500'
     },
     { 
