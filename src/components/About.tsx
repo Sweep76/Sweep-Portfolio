@@ -1,3 +1,5 @@
+import { FaReact, FaNodeJs, FaPython, FaDatabase, FaJava, FaGitAlt, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { SiMongodb, SiMysql, SiTypescript, SiJavascript, SiPostgresql, SiSharp, SiPhp, SiGraphql, SiDocker, SiKubernetes, SiTailwindcss, SiSass, SiFirebase, SiDjango, SiLaravel, SiAmazon, SiNextdotjs, SiAngular, SiSupabase, SiPytorch, SiPowers, SiDotnet, SiLangchain } from "react-icons/si";
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -20,7 +22,39 @@ const About = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
-
+  const techStacks = [
+    { name: "React", icon: <FaReact className="text-blue-400 w-12 h-12" />, link: "https://react.dev/" },
+    { name: "Node.js", icon: <FaNodeJs className="text-green-500 w-12 h-12" />, link: "https://nodejs.org/" },
+    { name: "Python", icon: <FaPython className="text-yellow-400 w-12 h-12" />, link: "https://www.python.org/" },
+    { name: "MongoDB", icon: <SiMongodb className="text-green-500 w-12 h-12" />, link: "https://www.mongodb.com/" },
+    { name: "MySQL", icon: <SiMysql className="text-blue-600 w-12 h-12" />, link: "https://www.mysql.com/" },
+    { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400 w-12 h-12" />, link: "https://www.postgresql.org/" },
+    { name: "TypeScript", icon: <SiTypescript className="text-blue-500 w-12 h-12" />, link: "https://www.typescriptlang.org/" },
+    { name: "JavaScript", icon: <SiJavascript className="text-yellow-300 w-12 h-12" />, link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+    { name: "PHP", icon: <SiPhp className="text-indigo-400 w-12 h-12" />, link: "https://www.php.net/" },
+    { name: "C#", icon: <SiSharp className="text-purple-500 w-12 h-12" />, link: "https://learn.microsoft.com/en-us/dotnet/csharp/" },
+    { name: "Java", icon: <FaJava className="text-orange-500 w-12 h-12" />, link: "https://www.java.com/" },
+    { name: "GraphQL", icon: <SiGraphql className="text-pink-500 w-12 h-12" />, link: "https://graphql.org/" },
+    { name: "Docker", icon: <SiDocker className="text-blue-400 w-12 h-12" />, link: "https://www.docker.com/" },
+    { name: "Kubernetes", icon: <SiKubernetes className="text-blue-500 w-12 h-12" />, link: "https://kubernetes.io/" },
+    { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400 w-12 h-12" />, link: "https://tailwindcss.com/" },
+    { name: "Sass", icon: <SiSass className="text-pink-400 w-12 h-12" />, link: "https://sass-lang.com/" },
+    { name: "Firebase", icon: <SiFirebase className="text-yellow-500 w-12 h-12" />, link: "https://firebase.google.com/" },
+    { name: "Django", icon: <SiDjango className="text-green-700 w-12 h-12" />, link: "https://www.djangoproject.com/" },
+    { name: "Laravel", icon: <SiLaravel className="text-red-500 w-12 h-12" />, link: "https://laravel.com/" },
+    { name: "AWS", icon: <SiAmazon className="text-orange-500 w-12 h-12" />, link: "https://aws.amazon.com/" },
+    { name: "Next.js", icon: <SiNextdotjs className="text-white w-12 h-12" />, link: "https://nextjs.org/" },
+    { name: "Angular", icon: <SiAngular className="text-red-500 w-12 h-12" />, link: "https://angular.io/" },
+    { name: "Supabase", icon: <SiSupabase className="text-green-500 w-12 h-12" />, link: "https://supabase.com/" },
+    { name: "Pytorch", icon: <SiPytorch className="text-orange-500 w-12 h-12" />, link: "https://pytorch.org/" },
+    { name: "Power BI", icon: <SiPowers className="text-yellow-400 w-12 h-12" />, link: "https://powerbi.microsoft.com/" },
+    { name: "ASP.NET", icon: <SiDotnet className="text-blue-600 w-12 h-12" />, link: "https://dotnet.microsoft.com/en-us/apps/aspnet" },
+    { name: "LangChain", icon: <SiLangchain className="text-purple-500 w-12 h-12" />, link: "https://www.langchain.com/" },
+    { name: "Git", icon: <FaGitAlt className="text-red-500 w-12 h-12" />, link: "https://git-scm.com/" },
+    { name: "HTML5", icon: <FaHtml5 className="text-orange-500 w-12 h-12" />, link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+    { name: "CSS3", icon: <FaCss3Alt className="text-blue-400 w-12 h-12" />, link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+  ];
+  
   const skills = [
     {
       icon: Heart,
@@ -31,13 +65,13 @@ const About = () => {
     { 
       icon: Code, 
       label: 'Backend Development',
-      description: 'Node.js | Php | ASP.NET | Python',
+      description: 'Node.js | Php | ASP.NET | Django',
       color: 'from-blue-500 to-cyan-500'
     },
     { 
       icon: Database, 
       label: 'Database Design',
-      description: 'MySQL | MongoDB | SupaBase | PostgreSQL',
+      description: 'MySQL | MongoDB | FireBase | PostgreSQL',
       color: 'from-purple-500 to-pink-500'
     },
     { 

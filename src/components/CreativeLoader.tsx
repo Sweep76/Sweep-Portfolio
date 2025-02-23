@@ -98,7 +98,7 @@ const CreativeLoader = () => {
         className="mt-12 text-center"
       >
         <motion.p className="text-lg text-gray-300">
-          {["Loading", "Sweep", "Swoop"].map((word, i) => (
+          {["Loading", "Sweep's", "Bunker"].map((word, i) => (
             <motion.span
               key={i}
               initial={{ opacity: 0 }}

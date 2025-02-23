@@ -5,9 +5,10 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-import Skills from './components/Skills';
 import Education from './components/Education';
 import Contact from './components/Contact';
+import Tech from './components/Techstack';
+
 // import Reviews from './components/Reviews';
 import CreativeLoader from './components/CreativeLoader';
 
@@ -39,10 +40,11 @@ function App() {
       >
         <Hero />
         <About />
+        <Tech />
         <Experience />
         <Projects />
         <Education />
-        <Skills />
+        {/* <Skills /> */}
         {/* <Reviews />  */}
         <Contact />
       </main>
