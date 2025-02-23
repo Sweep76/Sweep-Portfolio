@@ -130,7 +130,7 @@ const About = () => {
             className="lg:col-span-2 space-y-8"
           >
             <p className="text-xl text-gray-300 leading-relaxed">
-              Aspiring Software Developer skilled in developing web applications modern technologies like Next.js, TypeScript, and C#. Additionally also specialize in Data Science Fields through the creation of predictive and classification models to extract actionable insights into informative business decisions.
+              Aspiring Software Developer skilled in developing web applications modern technologies like React.js, TypeScript, and Python. Additionally also specialize in Data Science Fields through the creation of predictive and classification models to extract actionable insights into informative business decisions.
             </p>
             
             <div className="grid grid-cols-2 gap-6">
