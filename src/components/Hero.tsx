@@ -85,7 +85,7 @@ const Hero = () => {
 
           <p className="text-2xl md:text-3xl text-gray-300 mb-8 font-light">
             <span className="text-blue-400 font-normal">Software Developer</span> passionate on{" "}
-            <span className="text-purple-400 font-normal">Applications</span> and{" "}
+            <span className="text-purple-400 font-normal">Web Applications</span> and{" "}
             <span className="text-purple-400 font-normal">Data Science</span>
           </p>
 
