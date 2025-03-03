@@ -16,7 +16,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
     { icon: Briefcase, label: 'Experience', href: '#experience' },
     { icon: Code, label: 'Projects', href: '#projects' },
     { icon: GraduationCap, label: 'Education', href: '#education' },
-    { icon: Cpu, label: 'Skills', href: '#skills' },
+    // { icon: Cpu, label: 'Skills', href: '#skills' },
     // { icon: User, label: 'Reviews', href: '#reviews' },
     { icon: Mail, label: 'Contact', href: '#contact' },
   ];
@@ -94,7 +94,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
           >
           <img 
             src="/assets/images/projects/sweep.png" 
-            alt="Profile Image" 
+            alt="JC" 
             className="w-10 h-10 rounded-full object-cover"
           />
           </motion.div>
