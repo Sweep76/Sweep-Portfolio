@@ -12,6 +12,17 @@ const Experience = () => {
 
   const experiences = [
     {
+      title: "Data Analyst / Research Analyst",
+      company: "Gabtech Global, LLC",
+      date: "Jan 2025 - Apr 2025",
+      points: [
+        "Engineered end-to-end ETL pipelines for ingesting and transforming multi-source business data, enabling real-time analytics across departments.",
+        "Conducted advanced exploratory data analysis (EDA) and developed machine learning prototypes.",
+        "Automated reporting workflows using Python and PostgreSQL, integrating outputs into interactive dashboards via Tableau and Google Data Studio",
+        "Collaborated cross-functionally with product and engineering teams to deploy data solutions into production and ensuring scalability"
+      ]
+    },
+    {
       title: "Data Scientist Intern",
       company: "Talleco JobTarget",
       date: "Aug 2024 - Nov 2024",
@@ -33,7 +44,8 @@ const Experience = () => {
       ]
     }
   ];
-
+  
+  
   return (
     <section id="experience" className="min-h-screen relative bg-gray-900 overflow-hidden py-20">
       {/* Animated background with gradient */}
