@@ -1,5 +1,5 @@
 import { FaReact, FaNodeJs, FaPython, FaJava, FaGitAlt, FaHtml5, FaCss3Alt } from "react-icons/fa";
-import { SiMongodb, SiMysql, SiTypescript, SiJavascript, SiPostgresql, SiSharp, SiPhp, SiTailwindcss, SiFirebase, SiDjango, SiLaravel, SiNextdotjs, SiAngular, SiPytorch, SiPowers, SiDotnet, SiLangchain } from "react-icons/si";
+import { SiMongodb, SiMysql, SiTypescript, SiJavascript, SiPostgresql, SiSharp, SiPhp, SiSupabase, SiTailwindcss, SiFirebase, SiDjango, SiLaravel, SiNextdotjs, SiAngular, SiPytorch, SiPowers, SiDotnet, SiLangchain } from "react-icons/si";
 
 const techStacks = [
   { name: "Reacts", icon: <FaReact className="text-blue-400 w-8 h-8" />, link: "https://react.dev/" },
@@ -26,6 +26,7 @@ const techStacks = [
   { name: "Git", icon: <FaGitAlt className="text-red-500 w-8 h-8" />, link: "https://git-scm.com/" },
   { name: "HTML5", icon: <FaHtml5 className="text-orange-500 w-8 h-8" />, link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
   { name: "CSS3", icon: <FaCss3Alt className="text-blue-400 w-8 h-8" />, link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+  { name: "Supabase", icon: <SiSupabase className="text-green-400 w-8 h-8" />, link: "https://supabase.com/" },
 ];
 
 export default function TechStackGrid() {
