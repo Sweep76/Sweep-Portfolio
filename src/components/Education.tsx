@@ -25,10 +25,11 @@ const Education = () => {
       title: "College",
       institution: "University of San Carlos",
       year: "Aug 2021",
-      grade: "GPA: 1.63",
+      grade: "GPA: 1.61",
       icon: GraduationCap,
       color: "from-purple-500 to-pink-500",
       achievements: [
+        "Dean's Lister 2024-2025",
         "Dean's Lister 2023-2024",
         "DCISM Cisco Council Member", 
         "Google Developer Student Club Noogler (Member)"
@@ -39,13 +40,14 @@ const Education = () => {
       title: "Senior High School",
       institution: "Sacred Heart School - Ateneo de Cebu",
       year: "2019",
-      grade: 89.94,
+      grade: 90.94,
       icon: BookOpen,
       color: "from-blue-500 to-cyan-500",
       achievements: [
         "Science Stream Focus",
         "Academic Achievement",
-        "Extracurricular Activities"
+        "Extracurricular Activities",
+        "Red Cross Youth Member"
       ]
     },
     {
