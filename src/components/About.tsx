@@ -47,7 +47,6 @@ const About = () => {
     FaGitAlt: { name: "Git", color: "#F05032", link: "https://git-scm.com/" },
     SiDotnet: { name: ".NET", color: "#512BD4", link: "https://dotnet.microsoft.com/" },
     SiNextdotjs: { name: "Next.js", color: "white", link: "https://nextjs.org/" },
-    SiAngular: { name: "Angular", color: "#DD0031", link: "https://angular.io/" },
     SiTailwindcss: { name: "Tailwind CSS", color: "#06B6D4", link: "https://tailwindcss.com/" },
     SiMysql: { name: "MySQL", color: "#4479A1", link: "https://www.mysql.com/" },
     SiLangchain: { name: "Langchain", color: "purple", link: "https://www.langchain.com/" },
@@ -57,11 +56,6 @@ const About = () => {
     FaNodeJs: { name: "Node.js", color: "#8CC84B", link: "https://nodejs.org/" },
     SiPrisma: { name: "Prisma", color: "#2D3748", link: "https://www.prisma.io/" },
     SiApachekafka: { name: "Kafka", color: "purple", link: "https://kafka.apache.org/" },
-    SiSeaborn: { name: "Seaborn", color: "#9C1D40", link: "https://seaborn.pydata.org/" },
-    SiNltk: { name: "NLTK", color: "#FD3A45", link: "https://www.nltk.org/" },
-    SiScikitlearn: { name: "Scikit-learn", color: "#F7931E", link: "https://scikit-learn.org/" },
-    SiMatlab: { name: "MATLAB", color: "#0076A8", link: "https://www.mathworks.com/products/matlab.html" },
-    SiR: { name: "R", color: "#276DC3", link: "https://www.r-project.org/" },
     SiJupyter: {name: "Jupyter", color: "orange", link: "https://jupyter.org/"}
   };
 
@@ -229,7 +223,6 @@ const About = () => {
                 className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity"
                 whileHover={{ rotate: 90 }}
               >
-                ↗
               </motion.span>
             </motion.a>
           </motion.div>
