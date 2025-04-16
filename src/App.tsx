@@ -43,7 +43,7 @@ function App() {
         <Tech />
         <Experience />
         <Projects />
-        <Education />
+        {/* <Education /> */}
         {/* <Skills /> */}
         {/* <Reviews />  */}
         <Contact />
