@@ -31,7 +31,7 @@ const Hero = () => {
         ))}
       </div>
 
-      <div className="relative z-10 text-center px-4 max-w-5xl">
+      <div className="relative z-10 text-center px-4 max-w-2xl">
         <motion.div
           initial={{ scale: 0, rotate: -180 }}
           animate={{ scale: 1, rotate: 0 }}
@@ -69,7 +69,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="space-y-6"
         >
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
+          <div className="flex flex-wrap justify-center gap-1 mb-8">
             {skills.map((skill, index) => (
               <motion.span
                 key={skill}
@@ -83,19 +83,19 @@ const Hero = () => {
             ))}
           </div>
 
-          <p className="text-2xl md:text-3xl text-gray-300 mb-8 font-light">
+          <p className="text-2xl md:text-2xl text-gray-300 mb-8 font-light">
             <span className="text-blue-400 font-normal">Software Developer</span> passionate on{" "}
             <span className="text-purple-400 font-normal">Web Applications</span> and{" "}
             <span className="text-purple-400 font-normal">Data Science</span>
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-            <div className="flex gap-4">
+            <div className="flex gap-6">
               <motion.a 
                 href="#projects"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full font-medium flex items-center gap-2 group"
+                className="px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full font-medium flex items-center gap-2 group"
               >
                 <Code className="w-5 h-5" />
                 View Projects
@@ -113,7 +113,7 @@ const Hero = () => {
               </motion.a>
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex gap-5">
               <motion.a
                 href="https://github.com/Sweep76"
                 target="_blank"
