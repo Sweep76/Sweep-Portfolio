@@ -18,7 +18,7 @@ const Experience = () => {
       points: [
         "Engineered end-to-end ETL pipelines for ingesting and transforming multi-source business data across departments.",
         "Conducted advanced exploratory data analysis (EDA) and developed machine learning prototypes.",
-        "Collaborated cross-functionally with product and engineering teams to deploy data solutions into production and ensuring scalability"
+        "Collaborated cross-functionally with product and engineering teams"
       ]
     },
     {
@@ -28,7 +28,6 @@ const Experience = () => {
       points: [
         "Trained in industry level database management skills, to maintain, analyze, and organize large datasets efficiently",
         "Communicated key insights to technical and non-technical stakeholders, and collaborated with Data Scientists",
-        "Applied statistical analysis and methods using R and Python",
         "Provided comprehensive data report and design through PostgreSQL using PowerBi, Amazon Quicksight, and Athena."
       ]
     },
@@ -37,10 +36,9 @@ const Experience = () => {
       company: "QuadX",
       date: "Jun 2023 - Sep 2023",
       points: [
-        "Developed and implemented statistical models to analyze trends and optimize business operations",
+        "Developed and implemented statistical models using R and Python to analyze & optimize business operations",
         "Utilized predictive modeling techniques to forecast key business metrics",
-        "Managed deployment processes across various hosting platforms",
-        "Designed and maintained data pipelines to ensure the accuracy of data-driven solutions"
+        "Designed and maintained data pipelines to ensure reliability of data-driven solutions"
       ]
     }
   ];
