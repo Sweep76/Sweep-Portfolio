@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
-import { 
+import {
   GraduationCap,
   School,
   BookOpen,
@@ -24,14 +24,13 @@ const Education = () => {
       id: 1,
       title: "College",
       institution: "University of San Carlos",
-      year: "Aug 2021",
-      grade: "GPA: 1.61",
+      year: "Aug 2021-2025",
       icon: GraduationCap,
       color: "from-purple-500 to-pink-500",
       achievements: [
         "Dean's Lister 2024-2025",
         "Dean's Lister 2023-2024",
-        "DCISM Cisco Council Member", 
+        "DCISM Cisco Council Member",
         "Google Developer Student Club Noogler (Member)"
       ]
     },
@@ -39,37 +38,34 @@ const Education = () => {
       id: 2,
       title: "Senior High School",
       institution: "Sacred Heart School - Ateneo de Cebu",
-      year: "2019",
-      grade: 90.94,
+      year: "2019-2021",
       icon: BookOpen,
       color: "from-blue-500 to-cyan-500",
       achievements: [
-        "Science Stream Focus",
-        "Academic Achievement",
+        "STEM 3rd Place Quizbowl",
+        "Arduino-Based Projects",
         "Extracurricular Activities",
-        "Red Cross Youth Member"
+        "Red Cross Youth Volunteerism"
       ]
     },
     {
       id: 3,
       title: "High School",
       institution: "Sacred Heart School - Ateneo de Cebu",
-      year: "2015",
-      grade: 91.62,
+      year: "2015-2019",
       icon: School,
       color: "from-green-500 to-emerald-500",
       achievements: [
-        "Foundation Building",
-        "Academic Excellence",
-        "Core Subject Mastery"
+        "Academic Exellence",
+        "Student Athlete"
       ]
     }
   ];
 
   return (
-    <section id="education" className="min-h-screen relative bg-gray-900 overflow-hidden py-20">
-      {/* Animated background with gradient */}
-      <div className="absolute inset-0">
+    <section id="education" className="relative bg-gray-900 overflow-hidden py-16">
+      {/* Animated background */}
+      <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-gradient" />
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -87,7 +83,7 @@ const Education = () => {
           />
         ))}
       </div>
-      
+
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -181,7 +177,7 @@ const Education = () => {
                   )}
                 </AnimatePresence>
               </motion.div>
-              
+
               {/* Connecting Lines */}
               {index < educationData.length - 1 && (
                 <motion.div
