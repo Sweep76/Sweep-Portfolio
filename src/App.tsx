@@ -7,9 +7,7 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
-import Tech from './components/Techstack';
 
-// import Reviews from './components/Reviews';
 import CreativeLoader from './components/CreativeLoader';
 
 
@@ -40,11 +38,10 @@ function App() {
       >
         <Hero />
         <About />
-        <Tech />
+        {/* <Skills /> */}
         <Experience />
         <Projects />
-        {/* <Education /> */}
-        {/* <Skills /> */}
+        <Education />
         {/* <Reviews />  */}
         <Contact />
       </main>
