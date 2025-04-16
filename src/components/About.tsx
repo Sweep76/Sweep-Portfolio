@@ -1,5 +1,8 @@
 import { FaReact, FaNodeJs, FaPython, FaDatabase, FaJava, FaGitAlt, FaHtml5, FaCss3Alt } from "react-icons/fa";
-import { SiMongodb, SiMysql, SiTypescript, SiJavascript, SiPostgresql, SiSharp, SiPhp, SiGraphql, SiDocker, SiKubernetes, SiTailwindcss, SiSass, SiFirebase, SiDjango, SiLaravel, SiAmazon, SiNextdotjs, SiAngular, SiSupabase, SiPytorch, SiPowers, SiDotnet, SiLangchain } from "react-icons/si";
+import { SiC, SiCplusplus, SiMongodb, SiTensorflow, SiMysql, SiTypescript, SiJavascript, 
+  SiPostgresql, SiSharp, SiPhp, SiGraphql, SiDocker, SiKubernetes, SiTailwindcss, SiSass, SiFirebase, 
+  SiDjango, SiLaravel, SiAmazon, SiNextdotjs, SiAngular, SiSupabase, SiPytorch, 
+  SiPowers, SiDotnet, SiLangchain, SiPython, SiApachekafka, SiJupyter} from "react-icons/si";
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -14,57 +17,84 @@ import {
   Award,
   HeartCrack
 } from 'lucide-react';
-import { desc } from 'framer-motion/client';
 
 const About = () => {
-  const [hoveredSkill, setHoveredSkill] = useState(null);
+  const [hoveredSkill, setHoveredSkill] = useState<number | null>(null);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  }); 
-  
+  });
+
+  const iconData = {
+    SiC: { name: "C", color: "lightblue", link: "https://en.wikipedia.org/wiki/C_(programming_language)" },
+    SiAmazon: {name: "Amazon", color: "orange", link: "https://aws.amazon.com"},
+    FaJava: { name: "Java", color: "orange", link: "https://www.java.com/" },
+    SiCplusplus: { name: "C++", color: "#00599C", link: "https://isocpp.org/" },
+    SiJavascript: { name: "JavaScript", color: "#F7DF1E", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+    SiTypescript: { name: "TypeScript", color: "#3178C6", link: "https://www.typescriptlang.org/" },
+    SiSharp: { name: "C#", color: "grey", link: "https://learn.microsoft.com/en-us/dotnet/csharp/" },
+    SiPython: { name: "Python", color: "yellow", link: "https://www.python.org/" },
+    SiPhp: { name: "PHP", color: "#777BB4", link: "https://www.php.net/" },
+    SiLaravel: { name: "Laravel", color: "#FF2D20", link: "https://laravel.com/" },
+    SiMongodb: { name: "MongoDB", color: "#47A248", link: "https://www.mongodb.com/" },
+    SiFirebase: { name: "Firebase", color: "#FFCA28", link: "https://firebase.google.com/" },
+    SiSupabase: { name: "Supabase", color: "#3ECF8E", link: "https://supabase.com/" },
+    SiPostgresql: { name: "PostgreSQL", color: "#336791", link: "https://www.postgresql.org/" },
+    SiDjango: { name: "Django", color: "green", link: "https://www.djangoproject.com/" },
+    FaHtml5: { name: "HTML5", color: "#E34F26", link: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" },
+    FaCss3Alt: { name: "CSS3", color: "#1572B6", link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+    FaReact: { name: "React", color: "#61DAFB", link: "https://reactjs.org/" },
+    FaGitAlt: { name: "Git", color: "#F05032", link: "https://git-scm.com/" },
+    SiDotnet: { name: ".NET", color: "#512BD4", link: "https://dotnet.microsoft.com/" },
+    SiNextdotjs: { name: "Next.js", color: "white", link: "https://nextjs.org/" },
+    SiAngular: { name: "Angular", color: "#DD0031", link: "https://angular.io/" },
+    SiTailwindcss: { name: "Tailwind CSS", color: "#06B6D4", link: "https://tailwindcss.com/" },
+    SiMysql: { name: "MySQL", color: "#4479A1", link: "https://www.mysql.com/" },
+    SiLangchain: { name: "Langchain", color: "purple", link: "https://www.langchain.com/" },
+    SiPytorch: { name: "PyTorch", color: "#EE4C2C", link: "https://pytorch.org/" },
+    SiPowers: { name: "Power BI", color: "#F2C811", link: "https://powerbi.microsoft.com/" },
+    SiTensorflow: { name: "TensorFlow", color: "#FF6F00", link: "https://www.tensorflow.org/" },
+    FaNodeJs: { name: "Node.js", color: "#8CC84B", link: "https://nodejs.org/" },
+    SiPrisma: { name: "Prisma", color: "#2D3748", link: "https://www.prisma.io/" },
+    SiApachekafka: { name: "Kafka", color: "purple", link: "https://kafka.apache.org/" },
+    SiSeaborn: { name: "Seaborn", color: "#9C1D40", link: "https://seaborn.pydata.org/" },
+    SiNltk: { name: "NLTK", color: "#FD3A45", link: "https://www.nltk.org/" },
+    SiScikitlearn: { name: "Scikit-learn", color: "#F7931E", link: "https://scikit-learn.org/" },
+    SiMatlab: { name: "MATLAB", color: "#0076A8", link: "https://www.mathworks.com/products/matlab.html" },
+    SiR: { name: "R", color: "#276DC3", link: "https://www.r-project.org/" },
+    SiJupyter: {name: "Jupyter", color: "orange", link: "https://jupyter.org/"}
+  };
+
   const skills = [
-    {
-      icon: Heart,
-      label: 'Programming Languages',
-      description: 'PHP | Java | Python | TypeScript | C#',
-      color: 'from-red-500 to-yellow-500'
-    },
     { 
       icon: Code, 
-      label: 'Backend Development',
-      description: 'Node.js | Php | ASP.NET | Django',
+      label: 'Programming Languages',
+      icons: [SiC,  SiSharp, FaJava, SiJavascript, SiTypescript, SiPython, SiPhp],
       color: 'from-blue-500 to-cyan-500'
     },
     { 
       icon: Database, 
-      label: 'Database Design',
-      description: 'MongoDB | Supabase | PostgreSQL',
+      label: 'Backend Technologies',
+      icons: [SiLaravel, SiMongodb, SiFirebase, SiSupabase, SiMysql, SiPostgresql, SiDjango],
       color: 'from-purple-500 to-pink-500'
     },
     { 
       icon: Globe, 
-      label: 'Frontend Development',
-      description: 'Next.js | Angular | TailwindCSS',
+      label: 'Web & Frameworks',
+      icons: [SiDotnet, FaNodeJs, FaReact, SiNextdotjs, SiTailwindcss,  FaCss3Alt, FaHtml5],
       color: 'from-green-500 to-emerald-500'
     },
     { 
       icon: Coffee, 
       label: 'Data Science & Analytics',
-      description: 'Python | LangChain | Pytorch | Power BI',
-      color: 'from-yellow-500 to-orange-500'
+      icons: [SiJupyter, SiLangchain, SiPytorch, SiPowers, SiTensorflow, SiAmazon, SiApachekafka],
+      color: 'from-red-500 to-orange-500'
     },
-    {
-      icon: Clock,
-      label: 'Work Experience+',
-      description: '1 year',
-      color: 'from-purple-500 to-blue-500'
-    }
   ];
 
   return (
     <section id="about" className="min-h-screen flex items-center justify-center relative bg-gray-900 overflow-hidden py-20">
-      {/* Animated background with gradient */}
+      {/* Background Animation */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-gradient" />
         {[...Array(20)].map((_, i) => (
@@ -101,45 +131,44 @@ const About = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-12 items-center">
-        <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={inView ? { opacity: 1, scale: 1 } : {}}
-        transition={{ duration: 0.6 }}
-        className="lg:col-span-1"
-        >
-        <div className="relative mx-auto w-48 h-48">
-          <motion.div 
-            className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={inView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-1"
           >
-            <div className="absolute inset-1 rounded-full bg-gray-900 flex items-center justify-center">
-              <img 
-                src="/assets/images/projects/sweep.png" 
-                alt="Profile Image"
-                className="w-55 h-55 rounded-full object-cover"
-              />
+            <div className="relative mx-auto w-60 h-60">
+              <motion.div 
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              >
+                <div className="absolute inset-1 rounded-full bg-gray-900 flex items-center justify-center">
+                  <img 
+                    src="/assets/images/projects/sweep.png" 
+                    alt="Profile Image"
+                    className="w-60 h-60 rounded-full object-cover"
+                  />
+                </div>
+              </motion.div>
             </div>
           </motion.div>
-        </div>
-      </motion.div>
-
 
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="lg:col-span-2 space-y-8"
+            className="lg:col-span-2 space-y-6"
           >
             <p className="text-lg text-gray-300 leading-relaxed">
-              Aspiring Software Developer skilled in developing web applications modern technologies like React.js, TypeScript, and Python. Additionally also specialize in Data Science Fields through the creation of predictive and classification models to extract actionable insights into informative business decisions.
+              Aspiring Software Developer skilled in developing web applications using modern while also specializing in Data Science through the creation of predictive and classification models.
             </p>
             
             <div className="grid grid-cols-2 gap-4">
               {skills.map((skill, index) => (
                 <motion.div
                   key={index}
-                  className="p-6 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300"
+                  className="p-5 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   onHoverStart={() => setHoveredSkill(index)}
                   onHoverEnd={() => setHoveredSkill(null)}
@@ -148,8 +177,31 @@ const About = () => {
                     <skill.icon className="w-5 h-5 text-white" />
                   </div>
                   <h3 className="font-semibold text-lg text-white mb-2">{skill.label}</h3>
-                  <p className="text-gray-400">{skill.description}</p>
-                  
+                  <div className="flex flex-wrap gap-3 mt-2">
+                    {skill.icons.map((Icon, i) => {
+                      const key = Icon.name as keyof typeof iconData;
+                      const { name, color, link } = iconData[key] || {};
+                      return (
+                        <a 
+                          key={i} 
+                          href={link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="group relative"
+                        >
+                          <Icon 
+                            className="w-8 h-8 transition-transform group-hover:scale-110" 
+                            style={{ color: color || "white" }} 
+                          />
+                          {name && (
+                            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs rounded bg-gray-800 text-white opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                              {name}
+                            </div>
+                          )}
+                        </a>
+                      );
+                    })}
+                  </div>
                   <motion.div
                     className="w-full h-1 bg-gray-700/50 mt-4 rounded-full overflow-hidden"
                     initial={{ scaleX: 0 }}
