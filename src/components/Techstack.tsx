@@ -1,37 +1,38 @@
 import { FaReact, FaNodeJs, FaPython, FaJava, FaGitAlt, FaHtml5, FaCss3Alt } from "react-icons/fa";
 import { SiMongodb, SiMysql, SiTypescript, SiJavascript, SiPostgresql, SiSharp, SiPhp, SiSupabase, SiTailwindcss, SiFirebase, SiDjango, SiLaravel, SiNextdotjs, SiAngular, SiPytorch, SiPowers, SiDotnet, SiLangchain } from "react-icons/si";
+import { motion, AnimatePresence } from 'framer-motion';
 
 const techStacks = [
-  { name: "Reacts", icon: <FaReact className="text-blue-400 w-8 h-8" />, link: "https://react.dev/" },
-  { name: "Node.js", icon: <FaNodeJs className="text-green-500 w-8 h-8" />, link: "https://nodejs.org/" },
-  { name: "Python", icon: <FaPython className="text-yellow-400 w-8 h-8" />, link: "https://www.python.org/" },
-  { name: "MongoDB", icon: <SiMongodb className="text-green-500 w-8 h-8" />, link: "https://www.mongodb.com/" },
-  { name: "MySQL", icon: <SiMysql className="text-blue-600 w-8 h-8" />, link: "https://www.mysql.com/" },
-  { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400 w-8 h-8" />, link: "https://www.postgresql.org/" },
-  { name: "TypeScript", icon: <SiTypescript className="text-blue-500 w-8 h-8" />, link: "https://www.typescriptlang.org/" },
-  { name: "JavaScript", icon: <SiJavascript className="text-yellow-300 w-8 h-8" />, link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
-
-  { name: "C#", icon: <SiSharp className="text-purple-500 w-8 h-8" />, link: "https://learn.microsoft.com/en-us/dotnet/csharp/" },
-  { name: "Java", icon: <FaJava className="text-orange-500 w-8 h-8" />, link: "https://www.java.com/" },
-  { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400 w-8 h-8" />, link: "https://tailwindcss.com/" },
-  { name: "Firebase", icon: <SiFirebase className="text-yellow-500 w-8 h-8" />, link: "https://firebase.google.com/" },
-  { name: "Django", icon: <SiDjango className="text-green-700 w-8 h-8" />, link: "https://www.djangoproject.com/" },
-  { name: "Laravel", icon: <SiLaravel className="text-red-500 w-8 h-8" />, link: "https://laravel.com/" },
-  { name: "Next.js", icon: <SiNextdotjs className="text-white w-8 h-8" />, link: "https://nextjs.org/" },
   { name: "Angular", icon: <SiAngular className="text-red-500 w-8 h-8" />, link: "https://angular.io/" },
-  { name: "Pytorch", icon: <SiPytorch className="text-orange-500 w-8 h-8" />, link: "https://pytorch.org/" },
-  { name: "Power BI", icon: <SiPowers className="text-yellow-400 w-8 h-8" />, link: "https://powerbi.microsoft.com/" },
   { name: "ASP.NET", icon: <SiDotnet className="text-blue-600 w-8 h-8" />, link: "https://dotnet.microsoft.com/en-us/apps/aspnet" },
-  { name: "LangChain", icon: <SiLangchain className="text-purple-500 w-8 h-8" />, link: "https://www.langchain.com/" },
+  { name: "C#", icon: <SiSharp className="text-purple-500 w-8 h-8" />, link: "https://learn.microsoft.com/en-us/dotnet/csharp/" },
+  { name: "CSS3", icon: <FaCss3Alt className="text-blue-400 w-8 h-8" />, link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+  { name: "Django", icon: <SiDjango className="text-green-700 w-8 h-8" />, link: "https://www.djangoproject.com/" },
+  { name: "Firebase", icon: <SiFirebase className="text-yellow-500 w-8 h-8" />, link: "https://firebase.google.com/" },
   { name: "Git", icon: <FaGitAlt className="text-red-500 w-8 h-8" />, link: "https://git-scm.com/" },
   { name: "HTML5", icon: <FaHtml5 className="text-orange-500 w-8 h-8" />, link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
-  { name: "CSS3", icon: <FaCss3Alt className="text-blue-400 w-8 h-8" />, link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+  { name: "Java", icon: <FaJava className="text-orange-500 w-8 h-8" />, link: "https://www.java.com/" },
+  { name: "JavaScript", icon: <SiJavascript className="text-yellow-300 w-8 h-8" />, link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+  { name: "LangChain", icon: <SiLangchain className="text-purple-500 w-8 h-8" />, link: "https://www.langchain.com/" },
+  { name: "Laravel", icon: <SiLaravel className="text-red-500 w-8 h-8" />, link: "https://laravel.com/" },
+  { name: "MongoDB", icon: <SiMongodb className="text-green-500 w-8 h-8" />, link: "https://www.mongodb.com/" },
+  { name: "MySQL", icon: <SiMysql className="text-blue-600 w-8 h-8" />, link: "https://www.mysql.com/" },
+  { name: "Next.js", icon: <SiNextdotjs className="text-white w-8 h-8" />, link: "https://nextjs.org/" },
+  { name: "Node.js", icon: <FaNodeJs className="text-green-500 w-8 h-8" />, link: "https://nodejs.org/" },
+  { name: "Power BI", icon: <SiPowers className="text-yellow-400 w-8 h-8" />, link: "https://powerbi.microsoft.com/" },
+  { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400 w-8 h-8" />, link: "https://www.postgresql.org/" },
+  { name: "Pytorch", icon: <SiPytorch className="text-orange-500 w-8 h-8" />, link: "https://pytorch.org/" },
+  { name: "Python", icon: <FaPython className="text-yellow-400 w-8 h-8" />, link: "https://www.python.org/" },
+  { name: "Reacts", icon: <FaReact className="text-blue-400 w-8 h-8" />, link: "https://react.dev/" },
   { name: "Supabase", icon: <SiSupabase className="text-green-400 w-8 h-8" />, link: "https://supabase.com/" },
+  { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400 w-8 h-8" />, link: "https://tailwindcss.com/" },
+  { name: "TypeScript", icon: <SiTypescript className="text-blue-500 w-8 h-8" />, link: "https://www.typescriptlang.org/" },
 ];
 
 export default function TechStackGrid() {
 
   return (
+    
     <div className="relative p-8">
       {/* Background Styling */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-gradient"></div>
