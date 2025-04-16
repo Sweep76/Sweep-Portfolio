@@ -21,39 +21,7 @@ const About = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  });
-  const techStacks = [
-    { name: "React", icon: <FaReact className="text-blue-400 w-12 h-12" />, link: "https://react.dev/" },
-    { name: "Node.js", icon: <FaNodeJs className="text-green-500 w-12 h-12" />, link: "https://nodejs.org/" },
-    { name: "Python", icon: <FaPython className="text-yellow-400 w-12 h-12" />, link: "https://www.python.org/" },
-    { name: "MongoDB", icon: <SiMongodb className="text-green-500 w-12 h-12" />, link: "https://www.mongodb.com/" },
-    { name: "MySQL", icon: <SiMysql className="text-blue-600 w-12 h-12" />, link: "https://www.mysql.com/" },
-    { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400 w-12 h-12" />, link: "https://www.postgresql.org/" },
-    { name: "TypeScript", icon: <SiTypescript className="text-blue-500 w-12 h-12" />, link: "https://www.typescriptlang.org/" },
-    { name: "JavaScript", icon: <SiJavascript className="text-yellow-300 w-12 h-12" />, link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
-    { name: "PHP", icon: <SiPhp className="text-indigo-400 w-12 h-12" />, link: "https://www.php.net/" },
-    { name: "C#", icon: <SiSharp className="text-purple-500 w-12 h-12" />, link: "https://learn.microsoft.com/en-us/dotnet/csharp/" },
-    { name: "Java", icon: <FaJava className="text-orange-500 w-12 h-12" />, link: "https://www.java.com/" },
-    { name: "GraphQL", icon: <SiGraphql className="text-pink-500 w-12 h-12" />, link: "https://graphql.org/" },
-    { name: "Docker", icon: <SiDocker className="text-blue-400 w-12 h-12" />, link: "https://www.docker.com/" },
-    { name: "Kubernetes", icon: <SiKubernetes className="text-blue-500 w-12 h-12" />, link: "https://kubernetes.io/" },
-    { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400 w-12 h-12" />, link: "https://tailwindcss.com/" },
-    { name: "Sass", icon: <SiSass className="text-pink-400 w-12 h-12" />, link: "https://sass-lang.com/" },
-    { name: "Firebase", icon: <SiFirebase className="text-yellow-500 w-12 h-12" />, link: "https://firebase.google.com/" },
-    { name: "Django", icon: <SiDjango className="text-green-700 w-12 h-12" />, link: "https://www.djangoproject.com/" },
-    { name: "Laravel", icon: <SiLaravel className="text-red-500 w-12 h-12" />, link: "https://laravel.com/" },
-    { name: "AWS", icon: <SiAmazon className="text-orange-500 w-12 h-12" />, link: "https://aws.amazon.com/" },
-    { name: "Next.js", icon: <SiNextdotjs className="text-white w-12 h-12" />, link: "https://nextjs.org/" },
-    { name: "Angular", icon: <SiAngular className="text-red-500 w-12 h-12" />, link: "https://angular.io/" },
-    { name: "Supabase", icon: <SiSupabase className="text-green-500 w-12 h-12" />, link: "https://supabase.com/" },
-    { name: "Pytorch", icon: <SiPytorch className="text-orange-500 w-12 h-12" />, link: "https://pytorch.org/" },
-    { name: "Power BI", icon: <SiPowers className="text-yellow-400 w-12 h-12" />, link: "https://powerbi.microsoft.com/" },
-    { name: "ASP.NET", icon: <SiDotnet className="text-blue-600 w-12 h-12" />, link: "https://dotnet.microsoft.com/en-us/apps/aspnet" },
-    { name: "LangChain", icon: <SiLangchain className="text-purple-500 w-12 h-12" />, link: "https://www.langchain.com/" },
-    { name: "Git", icon: <FaGitAlt className="text-red-500 w-12 h-12" />, link: "https://git-scm.com/" },
-    { name: "HTML5", icon: <FaHtml5 className="text-orange-500 w-12 h-12" />, link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
-    { name: "CSS3", icon: <FaCss3Alt className="text-blue-400 w-12 h-12" />, link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
-  ];
+  }); 
   
   const skills = [
     {
@@ -71,13 +39,13 @@ const About = () => {
     { 
       icon: Database, 
       label: 'Database Design',
-      description: 'MySQL | MongoDB | FireBase | PostgreSQL',
+      description: 'MongoDB | Supabase | PostgreSQL',
       color: 'from-purple-500 to-pink-500'
     },
     { 
       icon: Globe, 
       label: 'Frontend Development',
-      description: 'Next.js | Angular | HTML | TailwindCSS',
+      description: 'Next.js | Angular | TailwindCSS',
       color: 'from-green-500 to-emerald-500'
     },
     { 
@@ -149,7 +117,7 @@ const About = () => {
               <img 
                 src="/assets/images/projects/sweep.png" 
                 alt="Profile Image"
-                className="w-45 h-45 rounded-full object-cover"
+                className="w-55 h-55 rounded-full object-cover"
               />
             </div>
           </motion.div>
@@ -163,11 +131,11 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="lg:col-span-2 space-y-8"
           >
-            <p className="text-xl text-gray-300 leading-relaxed">
+            <p className="text-lg text-gray-300 leading-relaxed">
               Aspiring Software Developer skilled in developing web applications modern technologies like React.js, TypeScript, and Python. Additionally also specialize in Data Science Fields through the creation of predictive and classification models to extract actionable insights into informative business decisions.
             </p>
             
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-4">
               {skills.map((skill, index) => (
                 <motion.div
                   key={index}
@@ -176,10 +144,10 @@ const About = () => {
                   onHoverStart={() => setHoveredSkill(index)}
                   onHoverEnd={() => setHoveredSkill(null)}
                 >
-                  <div className={`p-3 rounded-lg bg-gradient-to-r ${skill.color} mb-4 w-fit`}>
-                    <skill.icon className="w-6 h-6 text-white" />
+                  <div className={`p-3 rounded-lg bg-gradient-to-r ${skill.color} mb-2 w-fit`}>
+                    <skill.icon className="w-5 h-5 text-white" />
                   </div>
-                  <h3 className="font-semibold text-xl text-white mb-2">{skill.label}</h3>
+                  <h3 className="font-semibold text-lg text-white mb-2">{skill.label}</h3>
                   <p className="text-gray-400">{skill.description}</p>
                   
                   <motion.div
