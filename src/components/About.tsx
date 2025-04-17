@@ -184,7 +184,7 @@ const About = () => {
                           className="group relative"
                         >
                           <Icon 
-                            className="w-8 h-8 transition-transform group-hover:scale-110" 
+                            className="w-7 h-7 transition-transform group-hover:scale-110" 
                             style={{ color: color || "white" }} 
                           />
                           {name && (
