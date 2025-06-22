@@ -210,7 +210,7 @@ const About = () => {
             </div>
 
             <motion.a
-              href="/Work-Resume.pdf"
+              href="/Work-Resume-Chiu.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full font-medium group"
