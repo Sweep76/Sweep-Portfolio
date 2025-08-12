@@ -84,23 +84,27 @@ const Projects = () => {
       },
     },
 
-    // 3) Taskify
+    // 3) Agricultural Produce App
     {
-      title: "Taskify",
-      description: "Task Management App for Employees with searching index function, hierarchy ranking, and Admin CRUD Operations",
+      title: "Agricultural Produce App",
+      description: "A simplified reimplementation of the uFarmX agricultural management app",
       images: [
-        "/assets/images/projects/tasky.png",
+        "/assets/images/projects/ufarmx1.png",
+        "/assets/images/projects/ufarmx2.png",
+        "/assets/images/projects/ufarmx3.png",
+        "/assets/images/projects/ufarmx4.png",
+        "/assets/images/projects/ufarmx5.png",
       ],
-      tech: ["Vite", "React", "MySQL", "JavaScript"],
-      githubUrl: "https://github.com/Sweep76/Taskify-Management-Application",
+      tech: ["React", "MongoDB", "MySQL", "JavaScript", "Rest API"],
+      demoUrl: "https://ufarmx-buyer.vercel.app/",
       details: {
         overview:
-          "A Task Management Applications that help Employees organize their responsibilities in a fast-pace corporate world",
+          "A farm management platform prototype that allows users to log farm activities, track crop data, and view basic analytics, built as a learning project with minimal backend features.",
         features: [
-          "Time-based Tasks",
-          "Manage Employee Tasks for Careful Review",
-          "Calendar Control: Organize tasks based on priority or by time",
-          "Oversee task completion progress by Admin",
+          "Add and manage crop and field records",
+          "View basic yield and activity summaries",
+          "Simple dashboard for quick farm data access",
+          "Lightweight backend for storing and retrieving records",
         ],
       },
     },
@@ -151,27 +155,28 @@ const Projects = () => {
       ],
       },
     },
-    //
+    // LSI Sparse
     {
-      title: "Python Visualizer",
-      description: "Data Visualization Tool to help understand Data",
+      title: "LSI Sparse Model",
+      description: "Dynamic sparse attention system for LLMs that optimizes long-sequence inference",
       images: [
         "/assets/images/projects/visualizer.png",
         "/assets/images/projects/visualizer1.png",
         "/assets/images/projects/visualizer2.png",
+        "/assets/images/projects/visualizer3.png",
       ],
-      tech: ["Python", "Jupyter Notebook", "Seaborn", "Unittest", "Time series"],
-      githubUrl: "https://github.com/Sweep76/Data-Analytics-Visualizer",
+      tech: ["Python", "Triton", "FlashAttention", "CUDA (GPU-accelerated kernels", "LLaMA, InfiniteBench"],
+      githubUrl: "https://github.com/Sweep76/lsi-sparse",
       details: {
         overview:
-          "Pythong Visualier is a Data Visualization tool that helps you to understand the data in a more visual way. The libraries used are Matplotlib, Seaborn, and Pandas.",
+          "Developed a dynamic sparse attention system for LLMs that optimizes long-sequence inference (up to 128K tokens) by adapting attention patterns in real time, improving GPU efficiency without reducing accuracy.",
         features: [
-          "Exploratory Data Analysis",
-          "Data Cleaning",
+          "Context-aware attention pattern adjustment",
+          "Supports LLaMA, Qwen2, ChatGLM4, Yi architectures",
           "Data Preprocessing",
-          "Data Visualization",
-          "Data Analysis",
-          "Data Interpretation",
+          "Integration with PyTorch, Triton, Hugging Face, vLLM",
+          "Benchmarked on RULER and InfiniteBench datasets",
+          "Computational Efficiency Improvements",
         ],
       },
     },
