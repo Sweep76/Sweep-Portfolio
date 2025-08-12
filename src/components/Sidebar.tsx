@@ -13,7 +13,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
   const navItems = [
     { icon: Home, label: 'Home', href: '#home' },
     { icon: User, label: 'About', href: '#about' },
-    { icon: Briefcase, label: 'Experience', href: '#experience' },
+    // { icon: Briefcase, label: 'Experience', href: '#experience' },
     { icon: Cpu, label: 'Projects', href: '#projects' },
     { icon: GraduationCap, label: 'Education', href: '#education' },
     { icon: Mail, label: 'Contact', href: '#contact' },
