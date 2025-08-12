@@ -209,7 +209,7 @@ const About = () => {
               ))}
             </div>
 
-            <motion.a
+            {/* <motion.a
               href="/Work-Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -224,7 +224,7 @@ const About = () => {
                 whileHover={{ rotate: 90 }}
               >
               </motion.span>
-            </motion.a>
+            </motion.a> */}
           </motion.div>
         </div>
       </div>
