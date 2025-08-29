@@ -1,8 +1,10 @@
 import { FaReact, FaNodeJs, FaPython, FaDatabase, FaJava, FaGitAlt, FaHtml5, FaCss3Alt } from "react-icons/fa";
-import { SiC, SiCplusplus, SiMongodb, SiTensorflow, SiMysql, SiTypescript, SiJavascript, 
+import { 
+  SiC, SiCplusplus, SiMongodb, SiTensorflow, SiMysql, SiTypescript, SiJavascript, 
   SiPostgresql, SiSharp, SiPhp, SiGraphql, SiDocker, SiKubernetes, SiTailwindcss, SiSass, SiFirebase, 
   SiDjango, SiLaravel, SiAmazon, SiNextdotjs, SiAngular, SiSupabase, SiPytorch, 
-  SiPowers, SiDotnet, SiLangchain, SiPython, SiApachekafka, SiJupyter} from "react-icons/si";
+  SiPowers, SiDotnet, SiLangchain, SiPython, SiApachekafka, SiJupyter, SiPrisma
+} from "react-icons/si";
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -11,11 +13,7 @@ import {
   Code, 
   Database, 
   Globe, 
-  Heart,
-  Coffee,
-  Clock,
-  Award,
-  HeartCrack
+  Coffee
 } from 'lucide-react';
 
 const About = () => {
@@ -27,7 +25,7 @@ const About = () => {
 
   const iconData = {
     SiC: { name: "C", color: "lightblue", link: "https://en.wikipedia.org/wiki/C_(programming_language)" },
-    SiAmazon: {name: "Amazon", color: "orange", link: "https://aws.amazon.com"},
+    SiAmazon: { name: "Amazon", color: "orange", link: "https://aws.amazon.com" },
     FaJava: { name: "Java", color: "orange", link: "https://www.java.com/" },
     SiCplusplus: { name: "C++", color: "#00599C", link: "https://isocpp.org/" },
     SiJavascript: { name: "JavaScript", color: "#F7DF1E", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
@@ -56,32 +54,64 @@ const About = () => {
     FaNodeJs: { name: "Node.js", color: "#8CC84B", link: "https://nodejs.org/" },
     SiPrisma: { name: "Prisma", color: "#2D3748", link: "https://www.prisma.io/" },
     SiApachekafka: { name: "Kafka", color: "purple", link: "https://kafka.apache.org/" },
-    SiJupyter: {name: "Jupyter", color: "orange", link: "https://jupyter.org/"}
+    SiJupyter: { name: "Jupyter", color: "orange", link: "https://jupyter.org/" }
   };
 
   const skills = [
     { 
       icon: Code, 
       label: 'Programming Languages',
-      icons: [SiC,  SiSharp, FaJava, SiJavascript, SiTypescript, SiPython, SiPhp],
+      icons: [
+        { key: "SiC", Icon: SiC },
+        { key: "SiSharp", Icon: SiSharp },
+        { key: "FaJava", Icon: FaJava },
+        { key: "SiJavascript", Icon: SiJavascript },
+        { key: "SiTypescript", Icon: SiTypescript },
+        { key: "SiPython", Icon: SiPython },
+        { key: "SiPhp", Icon: SiPhp }
+      ],
       color: 'from-blue-500 to-cyan-500'
     },
     { 
       icon: Database, 
       label: 'Backend Technologies',
-      icons: [SiLaravel, SiMongodb, SiFirebase, SiSupabase, SiMysql, SiPostgresql, SiDjango],
+      icons: [
+        { key: "SiLaravel", Icon: SiLaravel },
+        { key: "SiMongodb", Icon: SiMongodb },
+        { key: "SiFirebase", Icon: SiFirebase },
+        { key: "SiSupabase", Icon: SiSupabase },
+        { key: "SiMysql", Icon: SiMysql },
+        { key: "SiPostgresql", Icon: SiPostgresql },
+        { key: "SiDjango", Icon: SiDjango }
+      ],
       color: 'from-purple-500 to-pink-500'
     },
     { 
       icon: Globe, 
       label: 'Web & Frameworks',
-      icons: [SiDotnet, FaNodeJs, FaReact, SiNextdotjs, SiTailwindcss,  FaCss3Alt, FaHtml5],
+      icons: [
+        { key: "SiDotnet", Icon: SiDotnet },
+        { key: "FaNodeJs", Icon: FaNodeJs },
+        { key: "FaReact", Icon: FaReact },
+        { key: "SiNextdotjs", Icon: SiNextdotjs },
+        { key: "SiTailwindcss", Icon: SiTailwindcss },
+        { key: "FaCss3Alt", Icon: FaCss3Alt },
+        { key: "FaHtml5", Icon: FaHtml5 }
+      ],
       color: 'from-green-500 to-emerald-500'
     },
     { 
       icon: Coffee, 
       label: 'Data Science & Analytics',
-      icons: [SiJupyter, SiLangchain, SiPytorch, SiPowers, SiTensorflow, SiAmazon, SiApachekafka],
+      icons: [
+        { key: "SiJupyter", Icon: SiJupyter },
+        { key: "SiLangchain", Icon: SiLangchain },
+        { key: "SiPytorch", Icon: SiPytorch },
+        { key: "SiPowers", Icon: SiPowers },
+        { key: "SiTensorflow", Icon: SiTensorflow },
+        { key: "SiAmazon", Icon: SiAmazon },
+        { key: "SiApachekafka", Icon: SiApachekafka }
+      ],
       color: 'from-red-500 to-orange-500'
     },
   ];
@@ -155,7 +185,7 @@ const About = () => {
             className="lg:col-span-2 space-y-6"
           >
             <p className="text-lg text-gray-300 leading-relaxed">
-              Aspiring Software Developer skilled in developing web applications using modern while also specializing in Data Science through the creation of predictive and classification models.
+              Aspiring Software Developer skilled in developing modern web applications, with a specialization in Data Science focused on building predictive and classification models.
             </p>
             
             <div className="grid grid-cols-2 gap-4">
@@ -172,8 +202,7 @@ const About = () => {
                   </div>
                   <h3 className="font-semibold text-lg text-white mb-2">{skill.label}</h3>
                   <div className="flex flex-wrap gap-3 mt-2">
-                    {skill.icons.map((Icon, i) => {
-                      const key = Icon.name as keyof typeof iconData;
+                    {skill.icons.map(({ key, Icon }, i) => {
                       const { name, color, link } = iconData[key] || {};
                       return (
                         <a 
@@ -208,7 +237,6 @@ const About = () => {
                 </motion.div>
               ))}
             </div>
-
             {/* <motion.a
               href="/Work-Resume.pdf"
               target="_blank"
