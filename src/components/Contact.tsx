@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
     <section id="contact" className="min-h-screen bg-gray-900 relative overflow-hidden px-4 py-20">
       <AnimatedBackground />
       
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-1">
         {/* Left Column - Contact Info */}
         <div className="space-y-8">
           <div className="space-y-4">
