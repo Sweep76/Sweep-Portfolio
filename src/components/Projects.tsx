@@ -110,26 +110,33 @@ const Projects = () => {
     },
 
     // 4) Ecommerce
-    {
-      title: "Ecommerce Website",
-      description: "Website to track financial expenses through display of elaborate visual graphs",
-      images: [
-        "/assets/images/projects/ecommerce.JPG",
-        "/assets/images/projects/ecommerce1.JPG",
-        "/assets/images/projects/ecommerce2.JPG",
-      ],
-      tech: ["TypeScript", "NodeJS Express", "React", "TailWind CSS", "MongoDB"],
-      details: {
-        overview:
-          "This Ecommerce Web Application serves as a economic dashboard to display list of total Sales, and track list of Product Income",
-        features: [
-          "Display Timely Transactions",
-          "Visualize Business Insights and Milestones",
-          "Effective tool to breakdown Monthly Expenditures",
-          "Easy to integrate into Performance workflows",
-        ],
-      },
-    },
+{
+  title: "Ecommerce Website",
+  description:
+    "A full-stack ecommerce platform designed to manage products, customers, and orders with real-time sales tracking and administrative controls.",
+  images: [
+    "/assets/images/projects/whirl1.png",
+    "/assets/images/projects/whirl2.png",
+    "/assets/images/projects/whirl3.png",
+    "/assets/images/projects/whirl4.png",
+    "/assets/images/projects/whirl5.png",
+    "/assets/images/projects/whirl6.png",
+    "/assets/images/projects/whirl7.png",
+  ],
+  tech: ["TypeScript", "NodeJS Express", "React", "TailWind CSS", "Supabase"],
+  demoUrl: "https://whirl-business.vercel.app/",
+  details: {
+    overview:
+      "This Ecommerce Web Application enables businesses to manage product listings, customer orders, and inventory while providing sales summaries and operational insights through a centralized dashboard.",
+    features: [
+      "Product and inventory management",
+      "Order processing and customer tracking",
+      "Sales summaries and revenue monitoring",
+      "Admin dashboard for business operations",
+    ],
+  },
+},
+
 
     // 5) Toxic Chat
     {
